@@ -45,7 +45,7 @@ jobs:
             Uri         = "https://api.github.com/repos/$ENV:GITHUB_REPOSITORY/check-runs"
             Headers     = @{
               'Authorization' = "Bearer $ENV:GITHUB_TOKEN"
-              'Accept' = 'application/vnd.github.antiope-preview+json'
+              'Accept' = 'application/vnd.github+json'
             }
             Method      = 'POST'
             Body        = "{`"name`": `"ShiftLeft NextGen Static Analysis`", `"head_sha`": `"$ENV:GITHUB_REF`", `"external_id`": `"shiftleft-csharp-demo`", `"details_url`": `"$ENV:URL`", `"status`": `"completed`", `"conclusion`": `"action_required`", `"output`": {`"title`": `"ShiftLeft NextGen Static Analysis Findings`", `"summary`": `"Visit $ENV:URL for the findings`"}}"
